@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/your-username/your-react-repo.git'
+                git 'https://github.com/msivakumarv/simple-reactjs-app.git'
             }
         }
 
