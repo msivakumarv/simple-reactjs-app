@@ -1,29 +1,35 @@
-import React from 'react'; // Importing React for JSX
+import React from 'react';
+import './App.css';
+import Customers from './Customers';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-import Home from './components/Home'; // Adjust the import paths as needed
-import About from './components/About';
 
 /**
- * App component serves as the main entry point for the application.
- * It handles routing between different pages using React Router.
+ * Main application component.
  *
- * @return {JSX.Element} The rendered component
+ * @return {JSX.Element} The rendered component.
  */
-function App() {
+const App = () => {
+  console.log("Host URL: " + process.env.PUBLIC_URL);
+
   return (
-    <Router>
-      <Switch>
-        {/* Route for the home page */}
-        <Route exact path="/" component={Home} />
-        
-        {/* Route for the about page */}
-        <Route path="/about" component={About} />
-        
-        {/* Redirect all other routes to the home page */}
-        <Redirect to="/" />
-      </Switch>
+    <Router basename={process.env.PUBLIC_URL}>
+      <div className="App">
+        <header className="App-header">
+          <h1 className="App-title">Simple React App</h1>
+        </header>
+        <Switch>
+          {/* Redirect from root to customerlist */}
+          <Route
+            exact
+            path="/"
+            render={() => <Redirect to="/customerlist" />}
+          />
+          {/* Route for the customer list */}
+          <Route exact path="/customerlist" component={Customers} />
+        </Switch>
+      </div>
     </Router>
   );
-}
+};
 
 export default App;
