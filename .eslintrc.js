@@ -22,6 +22,11 @@ module.exports = {
   'plugins': [
     'react',
   ],
+  'settings': {
+    'react': {
+      'version': 'detect', // Automatically detect the React version
+    },
+  },
   'rules': {
     'react/prop-types': 'warn', // Warn when prop types are not defined
     'react/jsx-uses-react': 'error', // Prevent unused React import in JSX files
