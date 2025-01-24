@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Customers from './Customers';
-import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 /**
  * Main application component.
