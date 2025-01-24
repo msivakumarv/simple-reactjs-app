@@ -1,11 +1,13 @@
-import React from 'react'; // Importing React for JSX usage
+import React from 'react'; // Importing React for JSX
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-import Home from './components/Home'; // Adjust the path if needed
-import About from './components/About'; // Adjust the path if needed
+import Home from './components/Home'; // Adjust the import paths as needed
+import About from './components/About';
 
 /**
  * App component serves as the main entry point for the application.
  * It handles routing between different pages using React Router.
+ *
+ * @return {JSX.Element} The rendered component
  */
 function App() {
   return (
