@@ -9,8 +9,6 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
  * @return {JSX.Element} The rendered component.
  */
 const App = () => {
-  console.log("Host URL: " + process.env.PUBLIC_URL);
-
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
